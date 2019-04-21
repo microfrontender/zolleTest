@@ -5,5 +5,6 @@
     */
 
 import "jquery";
-import 'reset-css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../sass/index.sass';
