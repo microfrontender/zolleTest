@@ -1,0 +1,398 @@
+.form
+    background: linear-gradient(rgba(17, 38, 74, 0.6), rgba(17, 38, 74, 0.6)), url('../img/form-bg.png') no-repeat 50% 50%
+    background-size: cover
+    &__inner
+        width: 100%
+        padding-top: 80px
+        padding-bottom: 110px
+        display: flex
+        align-items: center
+        justify-content: center
+    &__form
+        position: relative
+        display: flex
+        width: 1148px
+        height: 400px
+        background: #FFFFFF
+        box-shadow: 0px 9px 25px rgba(10, 27, 57, 0.4)
+    &__body
+        position: relative
+        width: 741px
+    &__info
+        padding: 60px 50px
+        height: inherit
+        width: 407px
+        background: linear-gradient(180deg, #173363 0%, #11264A 100%), #11264A
+    &__title
+        font-weight: 500
+        font-size: 40px
+        line-height: 49px
+        color: #FFFFFF
+    &__text
+        margin-top: 20px
+        font-size: 18px
+        line-height: 25px
+        color: #FFFFFF
+    &__indicators
+        position: absolute
+        top: 64px
+        left: 70px
+    &__page
+        
+        span
+            font-weight: 500
+            font-size: 15px
+            line-height: 21px
+            color: #11264A
+    &__progress
+        margin-top: 5px
+        width: 383px
+        height: 7px
+        left: 461px
+        top: 1462px
+        background: #F6F6F6
+        border-radius: 5px
+        &-line
+            width: 25%
+            height: 7px
+            background: #E8C48A
+            border-radius: 5px
+    &__item
+        display: none
+        padding-top: 163px
+        padding-left: 71px
+        &_active
+            display: flex
+    &__label
+        position: relative
+        &_check
+            margin-top: 7px
+            display: flex
+            justify-content: flex-start
+            span 
+                font-weight: 300
+                font-size: 10px
+                line-height: normal
+                color: rgba(17, 38, 74, 0.8)
+    &__input
+        margin-top: 20px
+        width: 344px
+        height: 50px
+        border-radius: 5px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            margin: -2px
+            border-radius: inherit
+            background: linear-gradient(to right, #D4AC6B, #FFDCA3)
+        input
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            width: 100% 
+            height: inherit
+            border-radius: 3px
+            border: none
+            font-size: 15px
+            line-height: 21px
+            padding-left: 16px
+        textarea
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            width: 100% 
+            height: inherit
+            border-radius: 3px
+            border: none
+            font-size: 15px
+            line-height: 21px
+            padding-left: 16px
+            padding-top: 16px
+        &_tel
+            width: 238px
+            height: 50px
+        &_textarea
+            
+            width: 344px
+            height: 132px
+    &__error
+        position: absolute
+        align-items: center
+        justify-content: center
+        display: none
+        width: 231px
+        height: 50px
+        background: #11264A
+        border-radius: 5px  
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3)
+        &_active
+            display: flex
+        span
+            font-weight: 300
+            font-size: 14px
+            color: #FFFFFF 
+        &_left
+            bottom: 0
+            right: -266px
+            &::before
+                position: absolute
+                content: ''
+                left: -15px
+                border: 10px solid transparent
+                border-right: 10px solid #11264A
+        &_top
+            top: -88px
+            &::before
+                position: absolute
+                content: ''
+                bottom: -15px
+                border: 10px solid transparent
+                border-top: 10px solid #11264A
+    
+    &__buttons
+        position: absolute
+        right: 35px
+        bottom: 50px
+        border-radius: 5px
+        &::before
+            position: absolute
+            content: ''
+            background: url('../img/arrow-form.png')    no-repeat 50% 50%
+            width: 53px
+            height: 45px
+            left: -65px
+            top: -15px
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            margin: -2px
+            border-radius: inherit
+            background: linear-gradient(to right, #D4AC6B, #FFDCA3)
+    &__button
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        border: none
+        width: 176px
+        height: 36px
+        background: linear-gradient(90deg, #D7B57E 0%, #FAD08C 100%)
+        border-radius: 5px
+        font-weight: 500
+        font-size: 12px
+        text-align: center
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: #11264A
+        cursor: pointer
+        z-index: 1
+        
+        span 
+            position: absolute
+            font-weight: 500
+            font-size: 12px
+            text-align: center
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: #11264A
+        &_submit
+            display: none
+
+    &__selector
+        display: none
+        position: absolute
+        margin-top: 5px
+        background: #FFFFFF
+        border: 2px solid rgba(17, 38, 74, 0.1)
+        border-radius: 5px 
+        width: 344px
+        z-index: 10
+        &-item
+            padding-left: 20px
+            display: flex
+            align-items: center
+            box-sizing: border-box
+            width: 100%
+            height: 50px
+            font-size: 15px
+            line-height: 21px
+            color: #11264A
+            cursor: pointer
+            &:hover
+                background: #FBD9A4
+                border: 2px solid rgba(17, 38, 74, 0.1) 
+                font-weight: 500
+    &__col
+        &+.form__col
+            margin-left: 30px
+    &__headline
+        font-size: 15px
+        line-height: 21px
+        color: #11264A
+        &_small
+            position: relative
+            bottom: -15px
+            font-weight: 300
+            font-size: 10px
+            line-height: 14px
+    &__checkbox
+        display: block
+        width: 12px
+        height: 12px
+        background-color: #FBD9A4
+        margin-right: 8px
+        cursor: pointer
+    #check:checked~.form__checkbox
+        background: url('../img/check.png') no-repeat 50% 50%
+        background-color: #FBD9A4
+    #check
+        opacity: 0
+        position: absolute
+
+    &__thx
+        position: absolute
+        display: none
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 10
+        background: #ffffff
+        overflow: hidden
+        &-title
+            // margin-top: 108px
+            font-weight: 500
+            font-size: 40px
+            line-height: 49px
+            color: #11264A  
+        &-desc
+            width: 308px
+            margin-top: 20px
+            font-size: 18px
+            line-height: 25px
+            text-align: center
+            color: #11264A  
+        &-text
+            
+            margin-top: 20px
+            font-weight: 500
+            font-size: 18px
+            line-height: 25px
+            text-align: center
+            color: #11264A
+        &-close
+            cursor: pointer
+            position: absolute
+            top: 30px
+            right: 30px
+            background: url('../img/close.png') no-repeat 50% 50%
+            height: 21px
+            width: 21px
+        &::after
+            position: absolute
+            content: ''
+            width: 623px
+            height: 210px
+            left: 50%
+            margin-left: -311px
+            bottom: -50px
+            background: url('../img/thx.png') no-repeat 50% 50%
+#sum
+    -moz-appearance: textfield
+    &::-webkit-inner-spin-button 
+         display: none
+
+
+@media (max-width: 1439px)
+    .form
+        &__form
+            width: 100%
+        &__info
+            padding: 45px 35px
+            width: 377px
+        &__title
+            font-size: 35px
+        &__input
+            width: 316px
+            &_tel
+               width: 190px
+            &_textarea
+                z-index: 1
+        &__selector
+            width: 316px
+            
+@media (max-width: 1023px)
+    .form
+        &__form
+            flex-direction: column
+            height: auto
+        &__body
+            order: 2  
+            min-height: 325px   
+            height: auto
+            width: 100% 
+        &__info
+            order: 1  
+            width: 100%
+        &__buttons
+            bottom: 25px   
+        &__indicators
+            top: 25px
+            left: 35px
+        &__item
+            padding-top: 88px
+            padding-left: 35px
+            padding-bottom: 92px
+        &__input
+            &_tel
+                width: 238px
+                height: 50px
+            &_textarea
+                width: 344px
+@media (max-width: 767px)
+    .form
+        &__indicators
+            right: 35px
+        &__progress
+            width: 100%
+        &__info
+            padding: 30px 35px
+        &__title
+            font-size: 30px
+        &__text
+            margin-top: 0  
+            font-size: 16px
+        &__item
+            flex-direction: column
+            padding: 88px 35px 90px
+        &__input
+            width: 100%
+            &_tel
+                width: 100%
+            &_textarea
+                width: 100%
+        &__label
+            width: 100%
+        &__col
+            width: 100%
+            &+.form__col
+                margin: 0  
+        &__thx
+            &::after
+                display: none

@@ -1,0 +1,88 @@
+section.form
+    .container
+        .row
+            .form__inner
+                form.form__form#form
+                    .form__thx
+                        .form__thx-close
+                        .form__thx-title Приступаем к работе
+                        .form__thx-desc Предоставим 3 отличных варианта уже через 
+                            |
+                            b 15 минут.
+                        .form__thx-text Ожидайте нашего звонка!
+                    .form__body
+                        .form__indicators
+                            .form__pages
+                                span 1
+                                span 
+                                    |
+                                    |из
+                                    |
+                                span 4
+                            .form__progress
+                                .form__progress-line
+                        
+                        .form__items
+                            .form__item.form__item_active
+                                label(for="sum").form__label
+                                    .form__headline 1. Какую сумму вы хотите инвестировать?
+                                    .form__input
+                                        input(type="number" placeholder="Введите сумму в рублях " name="sum" pattern="^[0-9]+$")#sum
+                                        .form__error.form__error_left
+                                            span Заполните поле слева 
+                            .form__item
+                                label(for="date").form__label
+                                    .form__headline 2. В каком году недвижимость должна начать приносить доход?
+                                    .form__input.form__input_selector
+                                        input(type="text" placeholder="Выберите год " name='date' readonly ).input-selector#date
+                                        .form__error.form__error_left
+                                            span Заполните поле слева 
+                                    .form__selector
+                                        .form__selector-item(data-selector="2019") 
+                                            span 2019
+                                        .form__selector-item(data-selector="2020") 
+                                            span 2020
+                                        .form__selector-item(data-selector="2021") 
+                                            span 2021
+                                    
+                            .form__item
+                                label(for="area").form__label
+                                    .form__headline 3. В каком районе вы хотели бы помещение?
+                                    .form__input.form__input_selector
+                                        input(type="text" placeholder="Выберите район " name='area' readonly).input-selector#area
+                                        .form__error.form__error_left
+                                            span Заполните поле слева 
+                                    .form__selector
+                                        .form__selector-item(data-selector="Адмиралтейский") 
+                                            span Адмиралтейский
+                                        .form__selector-item(data-selector="Василеостровский") 
+                                            span Василеостровский
+                                        .form__selector-item(data-selector="Выборский") 
+                                            span Выборский
+                                    
+                            .form__item
+                                .form__col
+                                    label(for="other").form__label
+                                        .form__headline 4. Укажите прочие требования и пожелания:
+                                        .form__input.form__input_textarea
+                                            textarea( placeholder="Опишите здесь " name="other", cols="30", rows="10")#other
+                                .form__col
+                                    label(for="tel").form__label
+                                        .form__headline.form__headline_small Ваш номер телефона
+                                        .form__input.form__input_tel
+                                            input(type="tel" placeholder="+ 7 (906) 234-945-23 " name='tel')#tel
+                                            .form__error.form__error_top
+                                                span Заполните поле
+                                    label(for="check").form__label.form__label_check
+                                        input(type="checkbox" required)#check
+                                        .form__checkbox
+                                        span я принимаю условия передачи информации
+                        
+                        .form__buttons
+                            .form__button.form__button_next 
+                                span Далее
+                            input(type="submit" value="Далее").form__button.form__button_submit
+
+                    .form__info
+                        h2.form__title Подбор лучших вариантов
+                        .form__text Заполните форму из 4 вопроссов, и мы подберем 3 самых перспективных  варианта под ваши требования в течение 15 минут.

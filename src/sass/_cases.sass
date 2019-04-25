@@ -1,0 +1,230 @@
+.cases
+    overflow: hidden
+    &__inner
+        padding-top: 170px
+        padding-bottom: 35px
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        font-weight: 500
+        font-size: 40px
+        line-height: 49px
+        color: #11264A
+    &__carousel
+        position: relative
+        margin-top: 40px
+        width: 100%
+        height: 660px
+        background: #FFFFFF
+        box-shadow: 0px 4px 20px rgba(17, 38, 74, 0.2)
+        &::before
+            position: absolute
+            content: ''
+            width: 280px
+            height: 640px
+            right: -186px
+            top: 50%
+            margin-top: -320px
+            background: url('../img/cases.png') no-repeat 50% 50%
+            z-index: -1
+    &__buttons
+        position: absolute
+        right: 50px
+        bottom: 24px
+        display: flex
+        align-items: baseline
+    &__button
+        background: url('../img/arrow.svg') no-repeat 50% 50%
+        width: 12px
+        height: 25px
+        &_next
+            transform: rotate(180deg)
+    &__pages
+        margin: 0 15px
+        width: 100px
+        display: flex
+        justify-content: center
+        align-items: baseline
+        span
+            font-family: Playfair Display
+            color: rgba(17, 38, 74, 0.5)
+            font-feature-settings: 'pnum' on, 'lnum' on
+            font-size: 30px
+            &:first-child
+                font-weight: bold
+                font-size: 45px
+                color: #E8C48A
+                text-shadow: 0px 2px 6px rgba(251, 217, 164, 0.3)
+    &__indicators
+       right: auto
+       bottom: 40px
+       left: 841px
+       margin: 0
+       padding: 0
+    li.cases__indicator
+        border-radius: 50%
+        width: 6px
+        height: 6px
+        background: #11264A
+        opacity: 1
+        border: none
+        margin-left: 0
+        margin-right: 10px
+        &:last-child
+            margin-right: 0
+        &.active
+            background: #E8C48A
+
+.case
+    
+    width: 100%
+    height: 660px
+    &__inner
+        display: flex
+        height: inherit
+    &__img
+        height: inherit
+        width: calc(50% + 106px)
+        &_1
+            background: url('../img/case-1.png') no-repeat 50% 50%
+            background-size: cover
+        &_2
+            background: url('../img/case-2.png') no-repeat 50% 50%
+            background-size: cover
+    &__body
+        width: calc(50% - 106px)
+        padding: 40px 125px 40px 50px   
+    &__title
+        font-family: Playfair Display
+        font-weight: bold
+        font-size: 25px
+        line-height: 35px
+        color: #C69642
+    &__price
+        margin-top: 20px
+        font-family: Playfair Display
+        font-weight: bold
+        font-size: 25px
+        line-height: 35px
+        color: #C69642
+        &-value
+            font-size: 52px
+            font-weight: 500
+            font-family: 'Frank Ruhl Libre'
+    &__headline
+        margin-top: 25px
+        font-family: Roboto
+        font-weight: 500
+        font-size: 20px
+        line-height: 28px
+        color: #11264A
+    &__text
+        margin-top: 10px
+        font-size: 15px
+        line-height: 21px
+        color: #11264A
+        ul
+            margin: 0
+            padding: 0
+            list-style: none
+    
+
+@media (max-width: 1439px)
+    .cases
+        &__carousel
+            height: 500px
+            &::before
+                height: 500px
+                margin-top: -250px
+                background-size: contain  
+        &__indicators
+            left: 522px
+        &__inner
+            padding-top: 150px
+        
+    .case
+        height: 500px
+        &__img
+            width: calc(50%)
+        &__body
+            width: calc(50%)
+            padding: 30px 40px 30px 40px
+        &__title
+            font-size: 20px
+        &__price
+            margin-top: 10px
+            font-size: 20px
+            &-value 
+                font-size: 46px
+        &__headline
+            margin-top: 10px
+        &__text
+            margin-top: 5px
+        
+
+@media (max-width: 1023px)
+    .cases
+        &__indicators
+            left: 382px
+            bottom: 22px
+        &__buttons
+            right: 24px
+            bottom: 8px
+        &__button
+            height: 14px
+            background-size: contain
+        &__pages
+            margin: 0 7px
+            span 
+               font-size: 22px 
+               &:first-child
+                   font-size: 38px
+        &__inner
+            padding-top: 100px
+        
+    .case
+        &__img
+            width: calc(50%)
+        &__body
+            width: calc(50%)
+            padding: 20px 30px 30px 20px
+        &__title
+            font-size: 18px
+        &__price
+            margin-top: 0
+            font-size: 18px
+            &-value 
+                font-size: 38px
+        &__headline
+            margin-top: 5px
+            font-size: 16px
+        &__text
+            margin-top: 0
+            font-size: 13px
+        
+
+@media (max-width: 767px)
+    .cases
+        &__indicators
+            left: 25px
+        &__title
+            font-size: 36px
+        &__carousel
+            margin-top: 20px
+            height: 700px
+        &__inner
+            padding-top: 50px
+    .case
+        height: 700px
+        
+        &__inner
+            flex-direction: column
+        &__img
+            height: 308px
+            width: 100%
+        &__body
+            height: auto
+            width: 100%
+            padding: 20px 30px 55px 20px

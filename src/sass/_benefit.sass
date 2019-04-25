@@ -1,0 +1,52 @@
+.benefit
+    &__inner
+        width: 100%
+        padding-bottom: 110px
+    &__title
+        font-family: Playfair Display
+        font-weight: bold
+        font-size: 25px
+        line-height: 35px
+        color: #11264A
+    &__items
+        width: 100%
+        margin-top: 30px
+        display: flex
+        justify-content: space-between
+    &__item
+        width: 295px
+    &__headline
+        font-weight: 500
+        font-size: 20px
+        line-height: 28px
+        color: #C69642
+    &__text
+        margin-top: 5px
+        font-size: 15px
+        line-height: 21px
+        color: #11264A
+
+@media (max-width: 1439px)
+    .benefit
+@media (max-width: 1023px)
+    .benefit
+        &__items
+            flex-wrap: wrap
+        &__item
+            width: 50%
+            margin-bottom: 20px
+        &__text
+            width: 80%
+@media (max-width: 767px)
+    .benefit
+        &__title
+            font-size: 20px
+        &__headline
+            font-size: 16px
+        &__items
+            margin-top: 15px
+        &__item
+            width: 100%
+            margin-bottom: 15px
+        &__text
+            font-size: 14px
